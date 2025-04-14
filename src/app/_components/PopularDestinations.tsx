@@ -81,7 +81,7 @@ function PopularDestinations() {
               <option.icon className="text-primary w-10 h-10" />
               <div>
                 <h3 className="text-lg font-semibold">{option.title}</h3>
-                <p className="text-sm text-muted">{option.description}</p>
+                <p className="text-sm text-[#AAAAAA]">{option.description}</p>
               </div>
             </li>
           ))}

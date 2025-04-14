@@ -47,17 +47,17 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(0.98 0.006 223.46);
+  --card: oklch(0.98 0.0029 264.54);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.65 0.1876 144.26);
+  --primary: oklch(0.72 0.2023 146.18);
   --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.34 0.1496 280.75);
+  --secondary: oklch(0.25 0.1671 264.11);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.47 0 0);
+  --muted: oklch(0.56 0 0);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.2 0.0016 197.03);
+  --accent: oklch(0 0 0);
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
@@ -120,6 +120,9 @@
     @apply bg-background text-foreground;
   }
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12;
+  }
+  .element-center {
+    @apply flex items-center justify-center;
   }
 }

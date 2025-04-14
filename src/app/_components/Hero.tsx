@@ -3,7 +3,7 @@ import Searchbar from "./Searchbar";
 
 function Hero() {
   return (
-    <section className="bg-card mt-4">
+    <section className="bg-card">
       <div className="container pb-10">
         <div className=" flex justify-between">
           <div className="py-10">
@@ -16,7 +16,7 @@ function Hero() {
           </div>
           <div>
             <Image
-              src="/images/hero-image.png"
+              src="/images/hero.png"
               alt="Hero Image"
               width={400}
               height={200}
