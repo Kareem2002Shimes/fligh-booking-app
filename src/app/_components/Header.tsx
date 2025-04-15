@@ -4,7 +4,7 @@ import Link from "next/link";
 function Header() {
   return (
     <header className="bg-card py-4 shadow-[0px_3px_6px_0px_rgba(0,0,0,0.16)] z-10 relative">
-      <div className="container flex gap-6 justify-end">
+      <div className="container flex gap-6 justify-center md:justify-end">
         <Link href="/" className="flex items-center gap-2 text-sm group">
           <Image
             src="/images/icons/suitcase-alt.svg"
@@ -13,7 +13,7 @@ function Header() {
             height={20}
           />
           <div className="flex flex-col">
-            <span className="text-[#666666] font-medium group-hover:text-primary duration-200 transition-colors">
+            <span className="text-muted font-medium group-hover:text-primary duration-200 transition-colors">
               My Trips
             </span>
             <span className="text-accent font-medium group-hover:text-primary duration-200 transition-colors">

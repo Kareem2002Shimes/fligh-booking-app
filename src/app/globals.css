@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@source "../../node_modules/react-tailwindcss-datepicker/dist/index.esm.{js,ts}";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -55,7 +56,7 @@
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.25 0.1671 264.11);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.56 0 0);
+  --muted: oklch(0.51 0 0);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0 0 0);
   --accent-foreground: oklch(0.208 0.042 265.755);
@@ -124,5 +125,8 @@
   }
   .element-center {
     @apply flex items-center justify-center;
+  }
+  .section-gap {
+    @apply py-10;
   }
 }
