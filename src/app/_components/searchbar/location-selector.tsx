@@ -34,7 +34,7 @@ const LocationSelector = ({
   suggestions,
 }: LocationSelectorProps) => {
   return (
-    <div className="flex items-center gap-4 flex-wrap  relative">
+    <div className="flex items-center gap-2 flex-wrap relative">
       <LocationBox
         placeholder="Leaving from"
         value={from}

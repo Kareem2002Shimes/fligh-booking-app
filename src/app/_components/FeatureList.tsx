@@ -7,7 +7,7 @@ const features = [
     description:
       "Kurdosline compares flight from 450+ airline to bring you the best deals",
     icon: {
-      src: "/images/icons/grid.svg",
+      src: "/images/icons/timer-icon.svg",
       alt: "Timer Icon",
     },
   },
@@ -41,7 +41,7 @@ function FeatureList() {
           {features.map((feature) => (
             <li
               key={feature.id}
-              className="flex flex-col lg:flex-row gap-4 bg-card p-4 rounded-md hover:shadow-md transition-shadow duration-200 ease-in-out"
+              className="flex flex-col lg:flex-row gap-4 bg-card p-4 rounded-md"
             >
               <div className="element-center">
                 <Image

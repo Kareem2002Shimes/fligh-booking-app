@@ -101,26 +101,32 @@ function Searchbar() {
   switch (selectedTripType) {
     case "one-way":
       content = (
-        <DatePicker
-          selectedDate={selectedDepartureDate}
-          setSelectedDate={setSelectedDepartureDate}
-          placeholder="Departure Date"
-        />
-      );
-      break;
-    case "round-trip":
-      content = (
-        <>
+        <div className="basis-1/7">
           <DatePicker
             selectedDate={selectedDepartureDate}
             setSelectedDate={setSelectedDepartureDate}
             placeholder="Departure Date"
           />
-          <DatePicker
-            selectedDate={selectedRetrunDate}
-            setSelectedDate={setSelectedRetrunDate}
-            placeholder="Return Date"
-          />
+        </div>
+      );
+      break;
+    case "round-trip":
+      content = (
+        <>
+          <div className="basis-1/7">
+            <DatePicker
+              selectedDate={selectedDepartureDate}
+              setSelectedDate={setSelectedDepartureDate}
+              placeholder="Departure Date"
+            />
+          </div>
+          <div className="basis-1/7">
+            <DatePicker
+              selectedDate={selectedRetrunDate}
+              setSelectedDate={setSelectedRetrunDate}
+              placeholder="Return Date"
+            />
+          </div>
         </>
       );
       break;
@@ -146,7 +152,7 @@ function Searchbar() {
         selectedTripType={selectedTripType}
         setSelectedTripType={setSelectedTripType}
       />
-      <div className="flex flex-col lg:flex-row items-center gap-4 lg:gap-6 mt-4">
+      <div className="flex flex-col lg:flex-row items-center gap-2 mt-4">
         <LocationSelector
           from={from}
           to={to}
@@ -156,6 +162,15 @@ function Searchbar() {
           suggestions={airportSuggestions}
         />
         {content}
+        {selectedTripType === "one-way" && (
+          <button
+            type="button"
+            onClick={() => setSelectedTripType("round-trip")}
+            className="basis-1/7 p-4 h-[65px] leading-4 text-sm text-muted hover:text-accent/80 cursor-pointer transition duration-200 flex items-center justify-center gap-2 rounded-md border border-[#DBDDE0] bg-white hover:bg-card"
+          >
+            Click to add a return flight for better discounts
+          </button>
+        )}
         <Button
           type="submit"
           className="w-full lg:w-auto h-16 px-6 lg:px-8 text-lg text-white font-semibold cursor-pointer"

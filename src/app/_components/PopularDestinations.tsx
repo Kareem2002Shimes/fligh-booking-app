@@ -114,15 +114,15 @@ function PopularDestinations() {
             <li className="xl:col-span-1">
               <DestinationCard destination={destinations[5]} />
             </li>
-            <li className="sm:col-span-2 flex md:h-[250px] flex-col md:flex-row group overflow-hidden border rounded-md border-[#707070]">
+            <li className="sm:col-span-2 flex md:h-[250px] flex-col md:flex-row border rounded-md border-[#707070]">
               <Image
                 src={destinations[6].image.src}
                 alt={destinations[6].image.alt}
                 width={200}
                 height={200}
-                className="w-full sm:w-[300px] xl:w-[200px] h-[250px] object-cover rounded-tl-md rounded-bl-md transition-transform duration-500 group-hover:scale-[1.1]"
+                className="w-full sm:w-[300px] xl:w-[200px] h-[250px] object-cover rounded-tl-md rounded-bl-md"
               />
-              <div className="flex-1 p-6 lg:p-10 flex flex-col gap-4 xl:justify-between">
+              <div className="flex-1 p-6 flex flex-col gap-4 xl:justify-between">
                 <div>
                   <h4 className="text-accent text-xl xl:text-2xl font-semibold">
                     Want to fly for even less?

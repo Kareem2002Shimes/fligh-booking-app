@@ -1,10 +1,13 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Airplay, ChevronRight, HelpCircle, LucideProps } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
+import { ForwardRefExoticComponent, RefAttributes, useState } from "react";
 
 function BestDeals() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const services = [
     {
       id: crypto.randomUUID(),
@@ -60,33 +63,45 @@ function BestDeals() {
           </div>
           <Services services={services} />
         </div>
-        <div className="py-10 text-muted font-medium flex flex-col gap-4">
-          <p>
-            Kurdosline is one of the largest online travel platforms in Iraq,
-            and a trusted name in the Iraq travel industry. We offer &quot;end
-            to end&quot; travel solutions including air tickets, hotel booking,
-            and holiday packages. Additionally, we offer ancillary value-added
-            services.
-          </p>
-          <p>
-            We understand that planning a trip can be overwhelming, so we have
-            simplified the process to make it easy for you to find the perfect
-            travel deals that suit your needs. Our website is user-friendly and
-            provides a wide range of options to choose from. Whether you&apos;re
-            planning a family vacation, a solo adventure, or a business trip, we
-            have you covered with our comprehensive travel packages. From
-            flights to hotels, car rentals to holiday packages, we offer
-            everything you need to make your trip a success.
-          </p>
-          <p>
-            We believe in transparency and honesty in all our dealings. We do
-            not charge any hidden fees, and our prices are always competitive.
-            With Kurdosline, you can be assured of getting the best travel deals
-            in the market. If you&apos;re looking for a hassle-free and
-            affordable way to plan your next trip, look no further than
-            Kurdosline. We promise to make your travel experience a memorable
-            one.
-          </p>
+        <div className="py-10 text-muted font-medium">
+          <div
+            className={`flex flex-col gap-4 transition-all duration-300 ${
+              isExpanded ? "max-h-[1000px]" : "max-h-[160px] overflow-hidden"
+            }`}
+          >
+            <p>
+              Kurdosline is one of the largest online travel platforms in Iraq,
+              and a trusted name in the Iraq travel industry. We offer &quot;end
+              to end&quot; travel solutions including air tickets, hotel
+              booking, and holiday packages. Additionally, we offer ancillary
+              value-added services.
+            </p>
+            <p>
+              We understand that planning a trip can be overwhelming, so we have
+              simplified the process to make it easy for you to find the perfect
+              travel deals that suit your needs. Our website is user-friendly
+              and provides a wide range of options to choose from. Whether
+              you&apos;re planning a family vacation, a solo adventure, or a
+              business trip, we have you covered with our comprehensive travel
+              packages. From flights to hotels, car rentals to holiday packages,
+              we offer everything you need to make your trip a success.
+            </p>
+            <p>
+              We believe in transparency and honesty in all our dealings. We do
+              not charge any hidden fees, and our prices are always competitive.
+              With Kurdosline, you can be assured of getting the best travel
+              deals in the market. If you&apos;re looking for a hassle-free and
+              affordable way to plan your next trip, look no further than
+              Kurdosline. We promise to make your travel experience a memorable
+              one.
+            </p>
+          </div>
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-primary hover:underline cursor-pointer hover:text-primary/80 transition duration-200 md:mt-4 font-semibold"
+          >
+            {isExpanded ? "Show less" : "Read more"}
+          </button>
         </div>
       </div>
     </section>

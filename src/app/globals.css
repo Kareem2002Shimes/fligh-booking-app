@@ -130,3 +130,9 @@
     @apply py-10;
   }
 }
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background-color: white !important;
+  opacity: 1 !important;
+}
